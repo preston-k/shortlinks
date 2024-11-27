@@ -1,8 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/((?!index.html).*)",
-      "destination": "/index.html?p=:path*"
+      "source": "/:path((?!index.html).*)",
+      "destination": "/index.html?p=:path*",
+      "permanent": true
     }
   ]
 }

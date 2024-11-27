@@ -11,10 +11,15 @@ firebase.initializeApp(firebaseConfig)
 let database = firebase.database()
 
 const urlParams = new URLSearchParams(window.location.search)
-let pre = urlParams.get('pre')
-if (pre == null || pre == '' || pre == undefined) {
-  document.querySelector('#load').style.display = 'none'
-  document.querySelector('#error').style.display = 'flex'
-}
+// let pre = urlParams.get('pre')
+// if (pre == null || pre == '' || pre == undefined) {
+//   document.querySelector('#load').style.display = 'none'
+//   document.querySelector('#error').style.display = 'flex'
+// }
 
+let pre = window.location.host.split('.')[0]
+
+console.log(pre)
+console.log(urlParams.get('p'))
+s
 console.log(pre)
