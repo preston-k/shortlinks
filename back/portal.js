@@ -19,7 +19,7 @@ document.querySelector('#submit').addEventListener('click', async () => {
   console.log(prefix)
   document.querySelector('#pre-fill').innerHTML = prefix
   document.querySelector('#atag').href = `https://${prefix}.prkw.xyz/${id}`
-  await database.ref(`/shorts/${prefix}`).update({
+  await database.ref(`/shorts/${prefix}/${id}`).update({
     to: document.querySelector('#url').value,
     id: id,
   })
