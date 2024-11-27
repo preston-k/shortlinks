@@ -21,5 +21,4 @@ let pre = window.location.host.split('.')[0]
 
 console.log(pre)
 console.log(urlParams.get('p'))
-s
 console.log(pre)
