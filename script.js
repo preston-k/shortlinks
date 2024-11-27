@@ -28,6 +28,11 @@ console.log(id)
 window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
 console.log(pre)
 await database.ref(`/shorts/${pre}/${id}/`).once('value', (snapshot) => {
-  console.log(snapshot.val())
-  window.location.replace(snapshot.val()['to'])
+  if (snapshot.val() != null) {
+    console.log(snapshot.val())
+    window.location.replace(snapshot.val()['to'])
+  } else {
+    document.querySelector('#load').style.display = 'none'
+    document.querySelector('#error').style.display = 'flex'
+  }
 })
