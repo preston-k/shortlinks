@@ -29,4 +29,5 @@ window.history.replaceState({}, document.title, window.location.pathname + '?' +
 console.log(pre)
 await database.ref(`/shorts/${pre}/${id}/`).once('value', (snapshot) => {
   console.log(snapshot.val())
+  window.location.replace(snapshot.val()['to'])
 })
