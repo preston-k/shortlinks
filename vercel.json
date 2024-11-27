@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/:path((?!index.html).*)",
+      "source": "/:path((?!index.html|.*\\.js|.*\\.css|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.svg).*)",
       "destination": "/index.html?p=:path*",
       "permanent": true
     }
