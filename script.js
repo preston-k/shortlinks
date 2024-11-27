@@ -20,7 +20,6 @@ urlParams.delete('p')
 // }
 
 let pre = window.location.host.split('.')[0]
-
 let id = urlParams.get('p')
 window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
 console.log(id)
