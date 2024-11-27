@@ -11,7 +11,6 @@ firebase.initializeApp(firebaseConfig)
 let database = firebase.database()
 
 const urlParams = new URLSearchParams(window.location.search)
-urlParams.delete('p')
 
 // let pre = urlParams.get('pre')
 // if (pre == null || pre == '' || pre == undefined) {
@@ -24,7 +23,7 @@ if (window.location.pathname.endsWith('/index.html')) {
 }
 let pre = window.location.host.split('.')[0]
 let id = urlParams.get('p')
-
+urlParams.delete('p')
 console.log(id)
-// window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
+window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
 console.log(pre)
