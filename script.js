@@ -27,3 +27,6 @@ urlParams.delete('p')
 console.log(id)
 window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
 console.log(pre)
+await database.ref(`/shorts/${pre}/${id}/`).once('value', (snapshot) => {
+  console.log(snapshot.val())
+})
