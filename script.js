@@ -19,8 +19,12 @@ urlParams.delete('p')
 //   document.querySelector('#error').style.display = 'flex'
 // }
 
+if (window.location.pathname.endsWith('/index.html')) {
+  window.history.replaceState(null, '', window.location.pathname.replace('/index.html', '/') + window.location.search + window.location.hash)
+}
 let pre = window.location.host.split('.')[0]
 let id = urlParams.get('p')
-window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
+
 console.log(id)
+// window.history.replaceState({}, document.title, window.location.pathname + '?' + urlParams.toString())
 console.log(pre)
